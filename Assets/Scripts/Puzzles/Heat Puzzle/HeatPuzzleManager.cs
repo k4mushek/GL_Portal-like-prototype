@@ -55,4 +55,9 @@ public class HeatPuzzleManager : MonoBehaviour
         currentHeat += heatPerSecond * intensity * Time.deltaTime;
         currentHeat = Mathf.Clamp(currentHeat, 0f, maxHeat);
     }
+
+    public void SetHeatIntencity(float value)
+    {
+        currentHeat += heatPerSecond * value * Time.deltaTime;
+    }
 }
