@@ -3170,7 +3170,6 @@ GameObject:
   - component: {fileID: 900660660}
   - component: {fileID: 900660659}
   - component: {fileID: 900660658}
-  - component: {fileID: 900660657}
   m_Layer: 6
   m_Name: Pressure Button
   m_TagString: Untagged
@@ -3193,20 +3192,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 761232058}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.983}
---- !u!114 &900660657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 900660655}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be8c0a39413588d43afb4c871e5f86fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleManager: {fileID: 47589279}
-  pressurePerPress: 5000
 --- !u!136 &900660658
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10451,6 +10436,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1910207046}
+  - component: {fileID: 1910207047}
   m_Layer: 0
   m_Name: HeatPuzzleManager
   m_TagString: Untagged
@@ -10473,6 +10459,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 700856123}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1910207047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910207045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24538c41ccde9854997647b6e7987293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  piston: {fileID: 2062861699}
+  chamberBase: {fileID: 2144373313}
+  expansionRate: 0.001
+  targetHeight: 1.5
+  currentHeat: 0
+  maxHeat: 1000
+  heatPerSecond: 50
+  heatDecayRate: 5
+  heatText: {fileID: 573652175}
+  door: {fileID: 397618170}
 --- !u!1 &1977476208
 GameObject:
   m_ObjectHideFlags: 0
@@ -11309,7 +11317,7 @@ Transform:
   m_GameObject: {fileID: 2144373312}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.4169998, y: -7.4989996, z: -20.636246}
+  m_LocalPosition: {x: 3.4169998, y: -7.4989996, z: -19.346}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
